@@ -1,0 +1,18 @@
+{
+  "extends": ["kentcdodds/jsx-a11y", "kentcdodds/react", "kentcdodds"],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "extensions": [".js"],
+        "map": [["~", "./src"]]
+      }
+    }
+  },
+  "rules": {
+    "react/prop-types": 0,
+    "semi": "off",
+    "jsx-quotes": ["error", "prefer-single"],
+    "arrow-parens": ["error", "as-needed"],
+    "arrow-body-style": ["error", "as-needed"]
+  }
+}
