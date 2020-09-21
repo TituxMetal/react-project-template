@@ -9,10 +9,24 @@
     }
   },
   "rules": {
-    "react/prop-types": 0,
-    "semi": "off",
-    "jsx-quotes": ["error", "prefer-single"],
+    "arrow-body-style": ["error", "as-needed"],
     "arrow-parens": ["error", "as-needed"],
-    "arrow-body-style": ["error", "as-needed"]
+    "import/order": [
+      "error",
+      {
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "pattern": "~/**",
+            "group": "parent"
+          }
+        ]
+      }
+    ],
+    "jsx-quotes": ["error", "prefer-single"],
+    "react-hooks/exhaustive-deps": 0,
+    "react/prop-types": 0,
+    "semi": "off"
   }
 }
