@@ -1,17 +1,17 @@
 import { createGlobalStyle } from 'styled-components'
 
-import LatoBlack from './Lato-Black.ttf'
-import LatoBlackItalic from './Lato-BlackItalic.ttf'
-import LatoBold from './Lato-Bold.ttf'
-import LatoBoldItalic from './Lato-BoldItalic.ttf'
-import LatoItalic from './Lato-Italic.ttf'
-import LatoLight from './Lato-Light.ttf'
-import LatoLightItalic from './Lato-LightItalic.ttf'
-import LatoRegular from './Lato-Regular.ttf'
-import LatoThin from './Lato-Thin.ttf'
-import LatoThinItalic from './Lato-ThinItalic.ttf'
+import LatoBlack from '~/static/fonts/Lato-Black.ttf'
+import LatoBlackItalic from '~/static/fonts/Lato-BlackItalic.ttf'
+import LatoBold from '~/static/fonts/Lato-Bold.ttf'
+import LatoBoldItalic from '~/static/fonts/Lato-BoldItalic.ttf'
+import LatoItalic from '~/static/fonts/Lato-Italic.ttf'
+import LatoLight from '~/static/fonts/Lato-Light.ttf'
+import LatoLightItalic from '~/static/fonts/Lato-LightItalic.ttf'
+import LatoRegular from '~/static/fonts/Lato-Regular.ttf'
+import LatoThin from '~/static/fonts/Lato-Thin.ttf'
+import LatoThinItalic from '~/static/fonts/Lato-ThinItalic.ttf'
 
-const GlobalFonts = createGlobalStyle`
+export const GlobalFonts = createGlobalStyle`
   @font-face {
     font-family: 'Lato Thin';
     font-style: normal;
@@ -83,5 +83,3 @@ const GlobalFonts = createGlobalStyle`
       url(${LatoBoldItalic}) format('truetype');
   }
 `
-
-export default GlobalFonts
