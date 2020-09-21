@@ -1,11 +1,11 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
-import * as theme from './colors'
-import GlobalFonts from './fonts'
-import GlobalStyle from './GlobalStyle'
+import { GlobalFonts } from './fonts'
+import { GlobalStyle } from './global-style'
+import { theme } from './theme'
 
-const Theme = ({ children }) => (
+const StyledContext = ({ children }) => (
   <ThemeProvider theme={theme}>
     <GlobalFonts />
     <GlobalStyle />
@@ -13,4 +13,4 @@ const Theme = ({ children }) => (
   </ThemeProvider>
 )
 
-export default Theme
+export default StyledContext
