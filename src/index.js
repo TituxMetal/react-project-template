@@ -1,12 +1,12 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-import Root from '~/root'
-import Theme from '~/theme'
+import { StyledContext } from '~/context'
+import Routes from '~/routes'
 
 render(
-  <Theme>
-    <Root />
-  </Theme>,
+  <StyledContext>
+    <Routes />
+  </StyledContext>, 
   document.getElementById('root')
 )
