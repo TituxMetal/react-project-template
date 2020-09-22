@@ -1,11 +1,12 @@
 import React from 'react'
 
-import { MainPage } from '~/components'
+import { ButtonLink, Container, Title } from '~/components'
 
 const Home = () => (
-  <MainPage.Splash>
-    <MainPage.Title>Home Page</MainPage.Title>
-  </MainPage.Splash>
+  <Container>
+    <Title>Home Page</Title>
+    <ButtonLink to='#'>Go to another place</ButtonLink>
+  </Container>
 )
 
 export default Home
