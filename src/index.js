@@ -1,12 +1,13 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-import { StyledContext } from '~/context'
+import { GlobalStyle } from '~/core'
 import Routes from '~/routes'
 
+const element = document.getElementById('root')
 render(
-  <StyledContext>
+  <GlobalStyle>
     <Routes />
-  </StyledContext>, 
-  document.getElementById('root')
+  </GlobalStyle>,
+  element
 )
