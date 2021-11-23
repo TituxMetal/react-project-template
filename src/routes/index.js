@@ -1,24 +1,20 @@
-import React, { lazy, Suspense } from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import React from 'react'
+import { BrowserRouter, Route, Routes, Switch } from 'react-router-dom'
 
 import { Layout } from '~/core'
+import MainRoute from './main'
 
-const AboutPage = lazy(() => import('~/pages/about'))
-const FormPage = lazy(() => import('~/pages/form'))
-const HomePage = lazy(() => import('~/pages/home'))
+const NoMatch = () => <h2>Nothing to see here!</h2>
 
-const Routes = () => (
+const Routing = () => (
   <BrowserRouter>
-    <Switch>
-      <Suspense fallback={<p>Loading Page...</p>}>
-        <Layout>
-          <Route exact path='/' component={HomePage} />
-          <Route path='/about' component={AboutPage} />
-          <Route path='/form' component={FormPage} />
-        </Layout>
-      </Suspense>
-    </Switch>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path='/*' element={<MainRoute />} />
+        <Route path='*' element={<NoMatch />} />
+      </Route>
+    </Routes>
   </BrowserRouter>
 )
 
-export default Routes
+export default Routing

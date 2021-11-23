@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 import tw, { styled } from 'twin.macro'
 
 import Footer from './Footer'
@@ -10,7 +11,9 @@ const Wrapper = styled.main(tw`flex flex-col h-screen`)
 const Layout = ({ children }) => (
   <Wrapper>
     <Navigation siteTitle='React Project Template' />
-    <Main>{children}</Main>
+    <Main>
+      <Outlet />
+    </Main>
     <Footer />
   </Wrapper>
 )
